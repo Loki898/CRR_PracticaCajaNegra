@@ -35,7 +35,6 @@ public class Game implements IWarnClock, IKeyListener, IDebuggable {
   private GraphicsContext ctxbackground;
   private KeyBoard kb;
   private boolean debug;
-  private Ball pelota;
   private ArrayList<Ball> pelotas;
 
   public Game(GraphicsContext context, GraphicsContext background, Dimension2D original) {
@@ -94,7 +93,7 @@ public class Game implements IWarnClock, IKeyListener, IDebuggable {
   public void setDebug(boolean debug) {
 
     this.debug = debug;
-    this.pelota.setDebug(debug);
+    
     for (Ball b : this.pelotas)
       b.setDebug(debug);
   }
